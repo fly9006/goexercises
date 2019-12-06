@@ -1,0 +1,2 @@
+# goexercises
+exercises for golang
