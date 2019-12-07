@@ -6,7 +6,6 @@ import (
 	"unicode/utf8"
 )
 
- 
 //创建一个基于 for 的简单的循环。使其循环 10 次，并且使用 fmt 包打印出计数 器的值。
 func Exercise001() {
 	for i := 1; i < 11; i++ {
@@ -17,19 +16,19 @@ func Exercise001() {
 //用 goto 改写 1 的循环。关键字 for 不可使用
 func Exercise002() {
 	x := 1
-	BEGIN:
-		if x <= 10{
-			fmt.Println("the current value is:", x)
-			x++
-			goto BEGIN
-		}
+BEGIN:
+	if x <= 10 {
+		fmt.Println("the current value is:", x)
+		x++
+		goto BEGIN
+	}
 }
 
 //再次改写这个循环，使其遍历一个 array，并将这个 array 打印到屏幕上
 func Exercise003() {
 	arr := [...]int{1, 2, 3, 4, 5}
 	//arr := [5]int{1, 2, 3, 4, 5}
-	for _, v := range arr{
+	for _, v := range arr {
 		fmt.Println("the current value is:", v)
 	}
 }
@@ -37,13 +36,13 @@ func Exercise003() {
 //解决这个叫做 Fizz-Buzz 的问题： 编写一个程序，打印从 1 到 100 的数字。当是3个倍数数就打印 “Fizz” 代替数字，当是5的倍数就打印 “Buzz” 。当数字同时是3和5的倍数 时，打印 “FizzBuzz” 。
 func Exercise004() {
 	for i := 1; i <= 100; i++ {
-		if i % 3 == 0 && i % 5 != 0{
+		if i%3 == 0 && i%5 != 0 {
 			fmt.Println("Fizz")
-		}else if i % 3  != 0 && i % 5 == 0{
+		} else if i%3 != 0 && i%5 == 0 {
 			fmt.Println("Buzz")
-		}else if i % 3 == 0 && i % 5 == 0{
+		} else if i%3 == 0 && i%5 == 0 {
 			fmt.Println("FizzBuzz")
-		}else{
+		} else {
 			fmt.Println("the number is:", i)
 		}
 	}
@@ -54,17 +53,17 @@ func Exercise004() {
 建立一个 Go 程序打印下面的内容（到 100 个字符）：
 
       A
-      
+
       AA
-      
+
       AAA
-      
+
       AAAA
-      
+
       AAAAA
-      
+
       AAAAAA
-      
+
       AAAAAAA
 */
 func Exercise005() {
@@ -87,7 +86,7 @@ func Exercise006() {
 func Exercise007() {
 	str := "asSASA ddd dsjkdsjs dk你好"
 	strRune := []rune(str)
-	copy(strRune[4: 4+3], []rune("abc"))
+	copy(strRune[4:4+3], []rune("abc"))
 	cstr := string(strRune)
 	fmt.Println(cstr)
 }
@@ -104,10 +103,10 @@ func Exercise008() {
 
 // 编写计算一个类型是 float64 的 slice 的平均值的代码
 func Exercise009() {
-	
+
 	slice := []float64{12.1, 2314.123, 354.657}
 	var total float64
-	for _, v := range slice{
+	for _, v := range slice {
 		total += v
 	}
 	fmt.Println(total / float64(len(slice)))
