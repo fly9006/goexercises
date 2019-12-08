@@ -6,14 +6,14 @@ import (
 	"unicode/utf8"
 )
 
-//创建一个基于 for 的简单的循环。使其循环 10 次，并且使用 fmt 包打印出计数 器的值。
+//Exercise001 创建一个基于 for 的简单的循环。使其循环 10 次，并且使用 fmt 包打印出计数 器的值。
 func Exercise001() {
 	for i := 1; i < 11; i++ {
 		fmt.Println("the current value is:", i)
 	}
 }
 
-//用 goto 改写 1 的循环。关键字 for 不可使用
+//Exercise002 用 goto 改写 1 的循环。关键字 for 不可使用
 func Exercise002() {
 	x := 1
 BEGIN:
@@ -24,7 +24,7 @@ BEGIN:
 	}
 }
 
-//再次改写这个循环，使其遍历一个 array，并将这个 array 打印到屏幕上
+//Exercise003 再次改写这个循环，使其遍历一个 array，并将这个 array 打印到屏幕上
 func Exercise003() {
 	arr := [...]int{1, 2, 3, 4, 5}
 	//arr := [5]int{1, 2, 3, 4, 5}
@@ -33,7 +33,7 @@ func Exercise003() {
 	}
 }
 
-//解决这个叫做 Fizz-Buzz 的问题： 编写一个程序，打印从 1 到 100 的数字。当是3个倍数数就打印 “Fizz” 代替数字，当是5的倍数就打印 “Buzz” 。当数字同时是3和5的倍数 时，打印 “FizzBuzz” 。
+//Exercise004 解决这个叫做 Fizz-Buzz 的问题： 编写一个程序，打印从 1 到 100 的数字。当是3个倍数数就打印 “Fizz” 代替数字，当是5的倍数就打印 “Buzz” 。当数字同时是3和5的倍数 时，打印 “FizzBuzz” 。
 func Exercise004() {
 	for i := 1; i <= 100; i++ {
 		if i%3 == 0 && i%5 != 0 {
@@ -49,7 +49,7 @@ func Exercise004() {
 
 }
 
-/*
+/* Exercise005
 建立一个 Go 程序打印下面的内容（到 100 个字符）：
 
       A
@@ -69,11 +69,11 @@ func Exercise004() {
 func Exercise005() {
 	a := "A"
 	for i := 1; i <= 100; i++ {
-		fmt.Println(strings.Repeat(a, i), "\n")
+		fmt.Println(strings.Repeat(a, i))
 	}
 }
 
-// 建立一个程序统计字符串里的字符数量： asSASA ddd dsjkdsjs dk 同时输出这个字符串的字节数。 提示： 看看 unicode/utf8 包。
+// Exercise006 建立一个程序统计字符串里的字符数量： asSASA ddd dsjkdsjs dk 同时输出这个字符串的字节数。 提示： 看看 unicode/utf8 包。
 func Exercise006() {
 	str := "asSASA ddd dsjkdsjs dk你好"
 	strCount := utf8.RuneCountInString(str)
@@ -82,7 +82,7 @@ func Exercise006() {
 	fmt.Println(len(strRune))
 }
 
-// 扩展/修改上一个问题的程序，替换位置 4 开始的三个字符为 “abc”
+// Exercise007 扩展/修改上一个问题的程序，替换位置 4 开始的三个字符为 “abc”
 func Exercise007() {
 	str := "asSASA ddd dsjkdsjs dk你好"
 	strRune := []rune(str)
@@ -91,7 +91,7 @@ func Exercise007() {
 	fmt.Println(cstr)
 }
 
-// 编写一个 Go 程序可以逆转字符串，例如 “foobar” 被打印成 “raboof”
+// Exercise008 编写一个 Go 程序可以逆转字符串，例如 “foobar” 被打印成 “raboof”
 func Exercise008() {
 	str := "foobar"
 	strRune := []rune(str)
@@ -101,7 +101,7 @@ func Exercise008() {
 	fmt.Println(string(strRune))
 }
 
-// 编写计算一个类型是 float64 的 slice 的平均值的代码
+// Exercise009 编写计算一个类型是 float64 的 slice 的平均值的代码
 func Exercise009() {
 
 	slice := []float64{12.1, 2314.123, 354.657}
