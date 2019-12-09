@@ -1,7 +1,8 @@
 package main
 
 import (
-	"goexercises/part1"
+	// "goexercises/part1"
+	"goexercises/part2"
 )
 
 func main() {
@@ -13,5 +14,7 @@ func main() {
 	// part1.Exercise006()
 	// part1.Exercise007()
 	// part1.Exercise008()
-	part1.Exercise009()
+	// part1.Exercise009()
+	// part2.Exercise010(11, 2)
+	part2.Exercise011()
 }
